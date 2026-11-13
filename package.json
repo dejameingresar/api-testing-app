@@ -1,0 +1,19 @@
+{
+  "name": "api-testing-app",
+  "version": "1.0.0",
+  "description": "Sample API for API Testing activity (k6 + Newman) and vulnerability scanning (Nuclei)",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node api/index.js",
+    "test:newman": "newman run tests/newman/collection.json -e tests/newman/environment.json"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "newman": "^6.2.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
