@@ -32,3 +32,7 @@ Cero hallazgos no significa "invulnerable": significa que esa superficie y esas 
 ## 5. Conclusión
 
 SAST (gosec) + SCA (Dependency-Check) + DAST (Nuclei) cubren tres ángulos distintos. El escaneo dinámico es el único que valida lo que realmente está expuesto en producción.
+
+## 6. Efecto colateral real: el escaneo activo el bot-protection de Vercel
+
+Tras lanzar ~1500 plantillas contra la app, Vercel activo temporalmente su Security Checkpoint ("We're verifying your browser") para todo el host, incluidos curl y Newman. El bloqueo expiro solo al cesar el trafico y se verifico con Newman (4 requests, 5 assertions, 0 fallos). Leccion: los escaneos DAST agresivos pueden degradar el servicio; en produccion se programan en ventanas de mantenimiento.
