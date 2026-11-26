@@ -3,7 +3,7 @@
 Probar una API no es solo "pegarle con curl una vez". En este artículo muestro un flujo completo y reproducible: una API Node/Express mínima, despliegue automático a Vercel desde GitHub, pruebas funcionales con Newman (Postman CLI) y pruebas de carga con k6, todo corriendo en CI con GitHub Actions.
 
 Repositorio: https://github.com/dejameingresar/api-testing-app
-API en producción: https://api-testing-app-nine.vercel.app
+API en producción: https://api-testing-nicole.vercel.app
 
 ## 1. La aplicación
 
@@ -25,7 +25,7 @@ La colección `tests/newman/collection.json` cubre 4 casos: health check, listad
 
 ```bash
 npx newman run tests/newman/collection.json \
-  --env-var baseUrl=https://api-testing-app-nine.vercel.app
+  --env-var baseUrl=https://api-testing-nicole.vercel.app
 ```
 
 Resultado real: 4 requests, 5 assertions, 0 fallos. Tiempo medio de respuesta ~374 ms.
@@ -35,7 +35,7 @@ Resultado real: 4 requests, 5 assertions, 0 fallos. Tiempo medio de respuesta ~3
 El script `tests/k6/load.js` usa stages (rampa a 10 usuarios virtuales, 1 minuto sostenido) con umbrales: menos de 1% de fallos y p95 bajo 500 ms.
 
 ```bash
-k6 run --env BASE_URL=https://api-testing-app-nine.vercel.app tests/k6/load.js
+k6 run --env BASE_URL=https://api-testing-nicole.vercel.app tests/k6/load.js
 ```
 
 k6 separa dos niveles que Newman no cubre: comportamiento bajo concurrencia y degradación de latencia (p95), no solo respuestas correctas.

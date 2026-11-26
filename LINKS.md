@@ -4,9 +4,9 @@
 https://github.com/dejameingresar/api-testing-app
 
 ## Deploy automático (Vercel, desde push a main)
-https://api-testing-app-nine.vercel.app
-- Health: https://api-testing-app-nine.vercel.app/health
-- Items: https://api-testing-app-nine.vercel.app/api/items
+https://api-testing-nicole.vercel.app
+- Health: https://api-testing-nicole.vercel.app/health
+- Items: https://api-testing-nicole.vercel.app/api/items
 
 ## Actividad Grupal 2 — API Testing (k6 + Newman)
 Artículo: https://dev.to/dejameingresar/api-testing-con-k6-y-newman-sobre-una-api-desplegada-en-vercel-19o2

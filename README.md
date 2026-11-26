@@ -2,6 +2,8 @@
 
 Sample API for the API Testing group activity.
 
+Deployed at https://api-testing-nicole.vercel.app
+
 ## Endpoints
 
 - `GET /health` → `{ "status": "ok" }`

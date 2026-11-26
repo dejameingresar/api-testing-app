@@ -3,7 +3,7 @@
 En los laboratorios del curso trabajamos con gosec (análisis estático en Go) y OWASP Dependency-Check (auditoría de dependencias). Este artículo muestra otra categoría: escaneo dinámico de la aplicación desplegada con Nuclei, de ProjectDiscovery, una herramienta distinta a las de los labs.
 
 Repositorio: https://github.com/dejameingresar/api-testing-app
-App escaneada: https://api-testing-app-nine.vercel.app
+App escaneada: https://api-testing-nicole.vercel.app
 
 ## 1. Por qué Nuclei
 
@@ -14,7 +14,7 @@ App escaneada: https://api-testing-app-nine.vercel.app
 ## 2. Instalación y ejecución
 
 ```bash
-nuclei -u https://api-testing-app-nine.vercel.app \
+nuclei -u https://api-testing-nicole.vercel.app \
   -severity low,medium,high,critical \
   -tags misconfig,exposure -o nuclei-report.txt
 ```
